@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+body {
+	background-color: #FFFFF
+}
+
+h2, h3 {
+	font-family: Serif;
+}
+
+a {
+	margin-top: 10px;
+}
+
+img {
+	border-width: 10px;
+}
+
+img:hover {
+	background-color: black;
+	color: white;
+}
+
+input[type] {
+	margin-top: 10px;
+	width: 400px;
+	padding: 8px;
+	box-sizing: border-box;
+	background: #FFFFF;
+	border-width: 2px;
+	border-color: #DCDCDC
+}
+
+button {
+	margin-top: 10px;
+	margin-left: 300px;
+	color: white;
+	background-color: #03A9F4;
+	padding: 10px;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+button:hover {
+	background-color: #3F51B5;
+}
+
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	background-color: #FBE9E7;
+}
+
+.flex-item {
+	background-color: #FFFFF;
+	flex-direction: column;
+	margin-top: 14%;
+	margin-left: 40%;
+}
+
+#text {
+	margin-top: 10px;
+	color: #2196F3;
+}
+
+#spaces {
+	margin-top: 150px;
+}
+* {
+    box-sizing: border-box;
+} 
+
+</style>
+<title>Sign in-Google Account</title>
+</head>
+<body>
+
+
+	<div class="flex-conatiner">
+		<form action="login">
+			<button type="submit" style="margin-left: 90%">Sign in</button>
+		</form>
+		<form method="get" action="https://www.google.com/search">
+			<div class="flex-item">
+				<img src="googleImg.png" alt="Google" class="image" />
+				<div style="margin-top: 10px; margin-left: -40px;">
+					<input type="text" name="q" value="" maxlength="25" />
+				</div>
+				<div>
+					<button type="submit">Search</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
