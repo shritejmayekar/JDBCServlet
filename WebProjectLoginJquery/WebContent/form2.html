@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+
+<script>
+$(function() {
+   $( “#mytestform” ).validate({
+           rules: {
+                   aname: {
+                           required: true,
+                           minlength: 4,
+                           maxlength: 20,
+                           customvalidation: true
+                   }
+           },
+           messages: {
+                   aname: {
+                           required: “Dude, enter a name”,
+                           minlength: $.format(“Keep typing, at least {0} characters required!”),
+                           maxlength: $.format(“Whoa! Maximum {0} characters allowed!”)
+                   }
+           }
+   });
+   $.validator.addMethod(“customvalidation”,
+           function(value, element) {
+                   return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
+           },
+   “Sorry, no special characters allowed”
+   );
+});
+</script>
+</head>
+<body>
+<form id="mytestform">
+email:<input type="email" minlength=4; name=aname required>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

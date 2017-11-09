@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+    $("#register" ).click(function() {
+    	var name=$("#name").val();
+    	var pass=$("#pass").val();
+    	
+      	if(name==''||pass=='')
+      		// $("#show").show();
+      	
+    
+      });
+    });
+  </script>
+ </head>
+ <body>
+ <form id ="form" name="myform">
+ <p>Name:&emsp;<input type="text" name="name"  id="name">
+ </p>
+ <p>Password:&emsp;<input type=password name="pass" id="pass">
+    <button id="register">Click Me!!</button>
+    <h6 id="show">This is required</h6>
+    </form>
+ </body>
+</html>
